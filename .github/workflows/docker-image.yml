@@ -8,7 +8,7 @@ on:
 env:
   PLATFORMS: linux/arm64
   SOURCE_REPOSITORY: InBrowserApp/dns.inbrowser.app
-  DOCKERHUB_REPOSITORY: dns.inbrowser.app
+  DOCKERHUB_REPOSITORY: helllord/dns.inbrowser.app
 
 jobs:
   get-tag:
