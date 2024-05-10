@@ -12,9 +12,8 @@ WORKDIR /dns.inbrowser.app
 COPY --from=base /git/dns.inbrowser.app .
 RUN npm install --global pnpm && \
     pnpm install && \
-    pnpm run build
+    pnpm build
 
-FROM pierrezemb/gostatic
+FROM lipanski/docker-static-website
 
-COPY --from=build /dns.inbrowser.app/dist /srv/http
-EXPOSE 8043
+COPY --from=build /dns.inbrowser.app/dist .
